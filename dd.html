@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İyi ki doğdun Aslı ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+  color: white;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 32px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.gallery img {
+  width: 80%;
+  max-width: 250px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #ff4b5c;
+  cursor: pointer;
+}
+
+#mesaj {
+  display: none;
+  margin: 20px;
+}
+
+#sayac {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* Kalpler */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  color: red;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h1>İyi ki doğdun Hayatım ❤️</h1>
+
+<p>Seninle her şey daha güzel...</p>
+
+<div id="sayac"></div>
+
+
+<div class="gallery">
+  <img src="foto1.jpg">
+  <img src="foto2.jpg">
+  <img src="foto3.jpg">
+  <img src="foto4.jpg">
+  <img src="foto5.jpg">
+  <img src="foto6.jpg">
+  <img src="foto7.jpg">
+  <img src="foto8.jpg">
+  <img src="foto9.jpg">
+  <img src="foto10.jpg">
+  <img src="foto11.jpg">
+  <img src="foto12.jpg">
+  <img src="foto13.jpg">
+  <img src="foto14.jpg">
+  <img src="foto15.jpg">
+</div>
+
+<button onclick="muzikAc()">🎵 Şarkımızı aç</button>
+
+<div id="player" style="display:none; margin-top:15px;">
+  <iframe width="300" height="170"
+    src="https://www.youtube.com/embed/NCKvjIJP0lE?autoplay=1"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
+
+  <p>
+    Sen hayatıma giren en güzel şeysin.  
+    Seninle geçen her gün daha anlamlı.  
+    Seni çok seviyorum bitanem ❤️
+  </p>
+</div>
+
+<!-- MÜZİK -->
+<audio autoplay loop>
+  <source src="muzik.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// Sayaç (02.08.2025)
+const startDate = new Date("2024-08-02");
+const today = new Date();
+const diffTime = today - startDate;
+const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+document.getElementById("sayac").innerText =
+  days + " gündür birlikteyiz ❤️";
+
+// Mesaj göster
+function goster() {
+  function muzikAc(){
+  document.getElementById("player").style.display = "block";
+  document.getElementById("mesaj").style.display = "block";
+}
+
+// Kalp oluştur
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerText = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}, 300);
+</script>
+
+</body>
+</html>
