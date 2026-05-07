@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İyi ki doğdun Aslı ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+  color: white;
+  overflow-x: hidden;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn { to { opacity: 1; } }
+
+h1 { margin-top: 30px; font-size: 34px; }
+p { font-size: 18px; }
+
+#sayac, #sevgiYazi {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.gallery-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  animation: slide 35s linear infinite;
+}
+
+.gallery:hover {
+  animation-play-state: paused;
+}
+
+.gallery img {
+  width: 230px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+@keyframes slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.controls {
+  margin-top: 15px;
+  position: relative;
+  z-index: 50;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 17px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  color: #ff4b5c;
+  cursor: pointer;
+  margin: 8px;
+  position: relative;
+  z-index: 50;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#popup, #mektupPopup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: #ff4b5c;
+  padding: 25px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 360px;
+  box-sizing: border-box;
+  z-index: 2000;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+#mektupYazi {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+  text-align: left;
+}
+
+#fotoBuyuk {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+}
+
+#fotoBuyuk img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 20px;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  font-size: 45px;
+  color: white;
+  cursor: pointer;
+  z-index: 1600;
+}
+
+#sol { left: 25px; }
+#sag { right: 25px; }
+
+#kutu {
+  font-size: 48px;
+  cursor: pointer;
+  margin-top: 15px;
+  position: relative;
+  z-index: 50;
+}
+
+.heart, .confetti {
+  position: fixed;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.heart {
+  bottom: -10px;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  to { transform: translateY(-100vh); opacity: 0; }
+}
+
+.confetti {
+  top: -10px;
+  animation: confettiFall 4s linear forwards;
+}
+
+@keyframes confettiFall {
+  to { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<h1>İyi ki doğdun Hayatım ❤️</h1>
+<p>Seninle her şey daha güzel...</p>
+
+<div id="sayac"></div>
+
+<div class="gallery-wrapper">
+  <div class="gallery">
+    <img src="foto1.jpg" onclick="fotoAc(0)">
+    <img src="foto2.jpg" onclick="fotoAc(1)">
+    <img src="foto3.jpg" onclick="fotoAc(2)">
+    <img src="foto4.jpg" onclick="fotoAc(3)">
+    <img src="foto5.jpg" onclick="fotoAc(4)">
+    <img src="foto6.jpg" onclick="fotoAc(5)">
+    <img src="foto7.jpg" onclick="fotoAc(6)">
+    <img src="foto8.jpg" onclick="fotoAc(7)">
+    <img src="foto9.jpg" onclick="fotoAc(8)">
+    <img src="foto10.jpg" onclick="fotoAc(9)">
+    <img src="foto11.jpg" onclick="fotoAc(10)">
+    <img src="foto12.jpg" onclick="fotoAc(11)">
+    <img src="foto13.jpg" onclick="fotoAc(12)">
+    <img src="foto14.jpg" onclick="fotoAc(13)">
+    <img src="foto15.jpg" onclick="fotoAc(14)">
+
+    <img src="foto1.jpg" onclick="fotoAc(0)">
+    <img src="foto2.jpg" onclick="fotoAc(1)">
+    <img src="foto3.jpg" onclick="fotoAc(2)">
+    <img src="foto4.jpg" onclick="fotoAc(3)">
+    <img src="foto5.jpg" onclick="fotoAc(4)">
+    <img src="foto6.jpg" onclick="fotoAc(5)">
+    <img src="foto7.jpg" onclick="fotoAc(6)">
+    <img src="foto8.jpg" onclick="fotoAc(7)">
+    <img src="foto9.jpg" onclick="fotoAc(8)">
+    <img src="foto10.jpg" onclick="fotoAc(9)">
+    <img src="foto11.jpg" onclick="fotoAc(10)">
+    <img src="foto12.jpg" onclick="fotoAc(11)">
+    <img src="foto13.jpg" onclick="fotoAc(12)">
+    <img src="foto14.jpg" onclick="fotoAc(13)">
+    <img src="foto15.jpg" onclick="fotoAc(14)">
+  </div>
+</div>
+
+<div class="controls">
+  <button id="muzikBtn" onclick="muzikToggle()">🎵 Şarkımızı aç</button>
+  <button onclick="mesajAc()">💌 Sana özel mesaj</button>
+  <button onclick="sevgi()">❤️ Sevgi butonu</button>
+  <button onclick="mektupAc()">📩 Gizli mektup</button>
+  <button onclick="kalpPatlat()">❤️ Kalp patlat</button>
+</div>
+
+<div id="sevgiYazi">Seni 0 kere daha sevdim ❤️</div>
+
+<div id="kutu" onclick="kutuAc()">🎁</div>
+
+<audio id="muzik" loop>
+  <source src="muzik.mp3" type="audio/mpeg">
+</audio>
+
+<div id="popup">
+  <h3>💌 Sana özel</h3>
+  <p>Sen hayatıma giren en güzel şeysin ❤️</p>
+  <button onclick="mesajKapat()">Kapat</button>
+</div>
+
+<div id="mektupPopup">
+  <h3>💌 Gizli mektup</h3>
+  <p id="mektupYazi"></p>
+  <button onclick="mektupKapat()">Kapat</button>
+</div>
+
+<div id="fotoBuyuk" onclick="fotoKapat()">
+  <span id="sol" class="navBtn" onclick="event.stopPropagation(); fotoDegistir(-1)">◀</span>
+  <img id="buyukResim">
+  <span id="sag" class="navBtn" onclick="event.stopPropagation(); fotoDegistir(1)">▶</span>
+</div>
+
+<script>
+const fotoListesi = [
+  "foto1.jpg","foto2.jpg","foto3.jpg","foto4.jpg","foto5.jpg",
+  "foto6.jpg","foto7.jpg","foto8.jpg","foto9.jpg","foto10.jpg",
+  "foto11.jpg","foto12.jpg","foto13.jpg","foto14.jpg","foto15.jpg"
+];
+
+let aktifFoto = 0;
+let muzikCalisiyor = false;
+let sevgiSayisi = 0;
+
+const gun = Math.floor((new Date() - new Date("2024-08-02")) / (1000*60*60*24));
+document.getElementById("sayac").innerText = gun + " gündür birlikteyiz ❤️";
+
+function muzikToggle() {
+  const muzik = document.getElementById("muzik");
+  const btn = document.getElementById("muzikBtn");
+
+  if (!muzikCalisiyor) {
+    muzik.play();
+    btn.innerText = "⏸️ Durdur";
+    muzikCalisiyor = true;
+  } else {
+    muzik.pause();
+    btn.innerText = "🎵 Şarkımızı aç";
+    muzikCalisiyor = false;
+  }
+}
+
+function mesajAc() {
+  document.getElementById("popup").style.display = "block";
+  konfeti();
+}
+
+function mesajKapat() {
+  document.getElementById("popup").style.display = "none";
+}
+
+function sevgi() {
+  sevgiSayisi++;
+  document.getElementById("sevgiYazi").innerText =
+    "Seni " + sevgiSayisi + " kere daha sevdim ❤️";
+  konfeti();
+}
+
+function mektupAc() {
+  document.getElementById("mektupPopup").style.display = "block";
+  yaz("Bunu okuduğunda sadece şunu bilmeni istiyorum:\n\nSen benim en güzel tesadüfüm, en kıymetlimsin. Gülüşün bile günümü güzelleştiriyor.\n\nNice güzel yaşların, nice güzel günlerimiz olsun.\nİyi ki doğdun aşkım ❤️");
+  konfeti();
+}
+
+function mektupKapat() {
+  document.getElementById("mektupPopup").style.display = "none";
+}
+
+function yaz(text) {
+  let i = 0;
+  const el = document.getElementById("mektupYazi");
+  el.innerText = "";
+
+  const int = setInterval(() => {
+    el.innerText += text[i];
+    i++;
+    if (i >= text.length) clearInterval(int);
+  }, 30);
+}
+
+function fotoAc(index) {
+  aktifFoto = index;
+  document.getElementById("buyukResim").src = fotoListesi[aktifFoto];
+  document.getElementById("fotoBuyuk").style.display = "flex";
+}
+
+function fotoDegistir(yon) {
+  aktifFoto += yon;
+  if (aktifFoto < 0) aktifFoto = fotoListesi.length - 1;
+  if (aktifFoto >= fotoListesi.length) aktifFoto = 0;
+  document.getElementById("buyukResim").src = fotoListesi[aktifFoto];
+}
+
+function fotoKapat() {
+  document.getElementById("fotoBuyuk").style.display = "none";
+}
+
+function kalpPatlat() {
+  for (let i = 0; i < 45; i++) {
+    const h = document.createElement("div");
+    h.className = "heart";
+    h.innerText = "❤️";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 5000);
+  }
+}
+
+function kutuAc() {
+  konfeti();
+  alert("Sürprizzz 🎉 Seni çok seviyorum ❤️");
+}
+
+function konfeti() {
+  for (let i = 0; i < 35; i++) {
+    const c = document.createElement("div");
+    c.className = "confetti";
+    c.innerText = ["🎉","🎊","✨","💖","⭐"][Math.floor(Math.random()*5)];
+    c.style.left = Math.random() * 100 + "vw";
+    c.style.fontSize = (Math.random() * 18 + 16) + "px";
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+setInterval(() => {
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.innerText = "❤️";
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.fontSize = (Math.random() * 18 + 12) + "px";
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 5000);
+}, 300);
+</script>
+
+</body>
+</html>
